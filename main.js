@@ -17,30 +17,7 @@ app.use((req, res, next) => {
 });
 
 // Endpoint to fetch data from HubSpot API
-
-/*
-
-
-app.get('/', async (req, res) => {
-res.send('<h1>server is running fine</h1>'); 
-});
-
-app.get('/hubspot-api', async (req, res) => {
-    try {
-        // Assuming token is passed as a query parameter
-        const response = await axios.get('https://api.hubapi.com/crm/v3/objects/contacts/', {
-            headers: {
-                'Authorization': `Bearer ${token}`,
-                'Content-Type': 'application/json'
-            }
-        });
-        res.json(response.data);
-    } catch (error) {
-        console.error('Error fetching data from HubSpot API:', error.message);
-        res.status(error.response.status || 500).json({ error: error.message });
-    }
-});
-*/
+ 
 
 
 app.get('/hubspot-api-search', async (req, res) => {
@@ -65,7 +42,7 @@ app.get('/hubspot-api-search', async (req, res) => {
             ]
           }
         ],
-        properties: ['firstname','lastname','phone','roll_no_','hs_lead_status']
+        properties: ['firstname','lastname','phone','roll_no_','hs_lead_status','stop_class']
       });
       
       let config = {
@@ -95,9 +72,3 @@ app.get('/hubspot-api-search', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
-
-
-
-
-
- 
