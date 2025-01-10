@@ -42,7 +42,7 @@ app.get('/hubspot-api-search', async (req, res) => {
             ]
           }
         ],
-        properties: ['firstname','lastname','phone','roll_no_','hs_lead_status','stop_class']
+        properties: ['firstname','lastname','phone','roll_no_','hs_lead_status','stop_class','full_name']
       });
       
       let config = {
