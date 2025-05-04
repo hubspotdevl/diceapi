@@ -23,7 +23,8 @@ app.use((req, res, next) => {
 app.get('/hubspot-api-search', async (req, res) => {
 
     const roll_no = req.query.roll_no;
-    const phone = req.query.phone;
+    const rawPhone = req.query.phone;
+    const phone =  rawPhone.replace(/\s+/g, '');
 
     let data = JSON.stringify({
         "filterGroups": [
