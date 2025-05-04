@@ -69,8 +69,8 @@ async function checkRecord(rollNo, phone) {
         return returnObj;
       }
       else {
-        console.log("Record not found !", returnObj); 
-        return returnObj;
+        console.log("Record not found !"); 
+        return {};
       }
     } else {
       console.log("Invalid Credentials.")
