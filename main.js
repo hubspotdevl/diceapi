@@ -57,8 +57,7 @@ async function checkRecord(rollNo, phone) {
     if (results?.length > 0) {
       const inputPhoneNumber = normalizePhone(phone);
       const rawPhoneNumberInDB = results[0]?.properties?.phone;
-      const phoneInDB = normalizePhone(rawPhoneNumberInDB);
-      console.log(results[0])
+      const phoneInDB = normalizePhone(rawPhoneNumberInDB); 
       const returnObj = {
         ...results[0],
         nameToPrint: results[0]?.properties?.full_name ? results[0]?.properties?.full_name : results[0]?.properties?.firstname + " " + results[0]?.properties?.lastname,
