@@ -65,10 +65,12 @@ async function checkRecord(rollNo, phone) {
 
       if (inputPhoneNumber === phoneInDB) {
         console.log("Record found !", returnObj);
+        res.json(returnObj);
         return returnObj;
       }
       else {
         console.log("Record not found !", returnObj);
+        res.json(returnObj);
         return returnObj;
       }
     } else {
