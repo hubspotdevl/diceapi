@@ -18,7 +18,8 @@ app.use((req, res, next) => {
  
 function normalizePhone(phone) {
   if (!phone) return ''; 
-  let cleaned = phone.replace(/\D/g, ''); 
+  let decoded = decodeURIComponent(phone);
+  let cleaned = decoded.replace(/\D/g, ''); 
   if (cleaned.startsWith('91')) {
       cleaned = cleaned.slice(2);
   }
