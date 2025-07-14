@@ -47,7 +47,7 @@ async function checkRecord(rollNo, phone) {
         ]
       }
     ],
-    properties: ['firstname', 'lastname', 'email', 'phone', 'roll_no_','stop_class'],
+    properties: ['upload_your_photo','firstname', 'lastname', 'email', 'phone', 'roll_no_','stop_class'],
     limit: 1
   };
 
